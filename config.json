@@ -1,0 +1,11 @@
+{
+  "Version":     "2.0.0",
+	"Environment": "dev",
+	"Port":        4000,
+	"LogglyKey":   "needed",
+	"LogLevel":    "debug",
+  "ConfigSearchPath": [
+		"/etc/ms-black-history/config.json",
+		"/root/config.json"
+	]
+}
