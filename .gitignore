@@ -17,8 +17,10 @@
 debug
 
 # The compiled app
-ms-geo-data
 ms-black-history
 
 # EMACS backups
 *~
+
+# IDE files
+.vscode/

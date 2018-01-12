@@ -12,9 +12,6 @@ import (
 
 // HandleFlashCardListAll returns rating data for a postal code
 func HandleFlashCardListAll(w http.ResponseWriter, r *http.Request) {
-	//args := mux.Vars(r)
-	//fmt.Fprintf(w, "Code: %v\n", postalCode)
-
 	record := models.FlashCards
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
@@ -22,18 +19,6 @@ func HandleFlashCardListAll(w http.ResponseWriter, r *http.Request) {
 	bar := string(foo)
 
 	fmt.Fprintf(w, bar)
-
-	// pcRecord := models.FlashCardDict[index]
-	// if pcRecord.ID == "" {
-	// 	w.WriteHeader(http.StatusNotFound)
-	// } else {
-	// 	pcRecord.ID = index
-	// 	w.WriteHeader(http.StatusOK)
-	// 	foo, _ := json.MarshalIndent(models.FlashCardDict, "", "  ")
-	// 	bar := string(foo)
-
-	// 	fmt.Fprintf(w, bar)
-	// }
 }
 
 // HandleFlashCardLookup returns rating data for a postal code
@@ -55,15 +40,4 @@ func HandleFlashCardLookup(w http.ResponseWriter, r *http.Request) {
 
 		fmt.Fprintf(w, bar)
 	}
-
-	// if pcRecord.ID == "" {
-	// 	w.WriteHeader(http.StatusNotFound)
-	// } else {
-	// 	pcRecord.ID = index
-	// 	w.WriteHeader(http.StatusOK)
-	// 	foo, _ := json.MarshalIndent(pcRecord, "", "  ")
-	// 	bar := string(foo)
-
-	// 	fmt.Fprintf(w, bar)
-	// }
 }

@@ -10,7 +10,6 @@ import (
 	"github.com/elephant-insurance/diagnostics"
 
 	"github.com/mccraymt/ms-black-history/config"
-	"github.com/mccraymt/ms-black-history/models"
 	routes "github.com/mccraymt/ms-black-history/routes"
 	"github.com/rs/cors"
 )
@@ -39,7 +38,7 @@ func main() {
 }
 
 func trivialDiagnostic() (diagnostics.DiagnosticResult, error) {
-	rp := diagnostics.NewResult().Succeed().SetDescriptionf("Data dictionary has %v entries", len(models.PostalCodeDict))
-
+	rp := diagnostics.NewResult().Succeed().SetDescriptionf("Data dictionary has %v entries", 5)
+	// return *rp, nil
 	return *rp, nil
 }
